@@ -41,14 +41,6 @@ nav {
   }
 }
 
-.splash {
-  position: absolute;
-  top: 0%;
-  right: 0%;
-  height: 100%;
-  z-index: -1;
-}
-
 .intro-social {
   margin-top: 4rem;
   a {
@@ -66,49 +58,4 @@ nav {
 .intro-text,
 .intro-images {
   flex: 1 1 40rem;
-}
-
-#plant-left {
-  animation: plant 1.5s ease infinite alternate;
-}
-
-#plant-right {
-  animation: plant 1.5s ease infinite alternate 0.5s;
-}
-#me {
-  animation: me 1s ease infinite alternate;
-  transform-origin: bottom;
-}
-
-#clock-arrow {
-  animation: clock 60s infinite linear;
-  transform-box: fill-box;
-  transform-origin: bottom;
-}
-
-@keyframes me {
-  from {
-    transform: rotateZ(-5deg);
-  }
-  to {
-    transform: rotateZ(5deg);
-  }
-}
-
-@keyframes plant {
-  from {
-    transform: translateY(0%);
-  }
-  to {
-    transform: translateY(-30%);
-  }
-}
-
-@keyframes clock {
-  from {
-    transform: rotateZ(0deg);
-  }
-  to {
-    transform: rotateZ(360deg);
-  }
 }
