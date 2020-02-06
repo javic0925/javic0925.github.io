@@ -1,0 +1,20 @@
+.projects {
+  width: 90%;
+  margin: auto;
+  min-height: 80vh;
+  @include flex(space-between, center, row);
+  text-align: center;
+  flex-wrap: wrap;
+  h2 {
+    margin: 5rem;
+  }
+}
+
+.projects-img {
+  flex: 1 1 40rem;
+  img {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+  }
+}
