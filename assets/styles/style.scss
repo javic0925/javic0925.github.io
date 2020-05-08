@@ -1,0 +1,153 @@
+@import "audioplayer";
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  background: #0d1321;
+}
+
+.main {
+  width: 100%;
+  height: 10vh;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  color: white;
+  text-align: center;
+  background: #121629;
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+.logo {
+  width: 60%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  width: auto;
+  height: 70%;
+}
+
+.landing {
+  width: 100vw;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.footer {
+  width: 100vw;
+  height: 5vh;
+  background: #121629;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+.radio {
+  width: 40%;
+  height: 35vh;
+  background: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+}
+
+.radioImg {
+  width: 98%;
+  height: 27vh;
+  overflow: hidden;
+}
+
+.list {
+  width: 100%;
+  height: 100%;
+}
+
+.radioControls {
+  width: 100%;
+  height: 7vh;
+}
+
+.chat {
+  width: 40%;
+  height: 35vh;
+  background: rgb(0, 0, 0);
+}
+
+[data-component="slideshow"] .slide {
+  display: none;
+  text-align: center;
+}
+
+[data-component="slideshow"] .slide.active {
+  display: block;
+  width: 100%;
+  height: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .main {
+    height: 10vh;
+    flex-direction: column;
+    padding-top: 0.1rem;
+    p {
+      font-size: 1rem;
+    }
+  }
+  .logo {
+    height: 50%;
+  }
+
+  .landing {
+    height: 90vh;
+    flex-direction: column;
+  }
+  .radio {
+    width: 100vw;
+    height: 30%;
+  }
+  .radioImg {
+    height: 70%;
+  }
+
+  .radioControls {
+    height: 30%;
+  }
+
+  .chat {
+    width: 100%;
+    height: 70%;
+  }
+}
