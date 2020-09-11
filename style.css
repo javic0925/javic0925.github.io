@@ -170,6 +170,13 @@ h3 {
   position: absolute;
   top: 1.5%;
   left: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+}
+
+.nav img {
+  width: 90%;
+  height: auto;
 }
 
 .footer {
