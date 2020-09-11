@@ -32,9 +32,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 #logo {
@@ -47,6 +44,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 1rem;
+  margin-top: 5rem;
 }
 
 #logo img {
