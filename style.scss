@@ -115,30 +115,34 @@ h3 {
 
 #chat {
   width: 100%;
-  height: 73%;
+  height: 78%;
 }
 
 .nav {
   position: absolute;
-  bottom: 14%;
+  top: 3%;
   left: 1.5rem;
 }
 
 .footer {
   width: 100vw;
-  height: 7%;
+  height: 12%;
   background-color: black;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
 }
 
 .wrapper {
   align-items: center;
   display: flex;
   width: 100%;
-  height: 20%;
+  height: 10%;
   justify-content: center;
   background-color: rgb(244, 58, 52);
 }
@@ -146,7 +150,7 @@ h3 {
   color: #fff;
   cursor: pointer;
   display: block;
-  font-size: 40px;
+  font-size: 2rem;
   height: 1em;
   position: relative;
   text-decoration: none;
