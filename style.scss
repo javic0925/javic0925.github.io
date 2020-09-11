@@ -32,6 +32,8 @@ body {
   img {
     height: 80%;
     width: auto;
+    animation-name: fadein;
+    animation-duration: 3s;
   }
 }
 
@@ -45,6 +47,8 @@ body {
 h1 {
   font-size: 2rem;
   font-weight: 900;
+  animation-name: shrink;
+  animation-duration: 1s;
 }
 
 h3 {
@@ -72,4 +76,24 @@ h3 {
   font-weight: 400;
   margin: 4px 2px;
   cursor: pointer;
+  animation-name: fadein;
+  animation-duration: 3s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes shrink {
+  from {
+    font-size: 4rem;
+  }
+  to {
+    font-size: 2rem;
+  }
 }

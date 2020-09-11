@@ -52,6 +52,10 @@ body {
 #logo img {
   height: 80%;
   width: auto;
+  -webkit-animation-name: fadein;
+          animation-name: fadein;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
 }
 
 #slogan {
@@ -64,6 +68,10 @@ body {
 h1 {
   font-size: 2rem;
   font-weight: 900;
+  -webkit-animation-name: shrink;
+          animation-name: shrink;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 h3 {
@@ -91,5 +99,45 @@ h3 {
   font-weight: 400;
   margin: 4px 2px;
   cursor: pointer;
+  -webkit-animation-name: fadein;
+          animation-name: fadein;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes shrink {
+  from {
+    font-size: 4rem;
+  }
+  to {
+    font-size: 2rem;
+  }
+}
+
+@keyframes shrink {
+  from {
+    font-size: 4rem;
+  }
+  to {
+    font-size: 2rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
