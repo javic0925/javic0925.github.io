@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -15,8 +15,8 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   font-family: "Poppins", sans-serif;
   overflow: hidden;
 }
@@ -28,11 +28,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-transition: 1s ease-in;
   transition: 1s ease-in;
   opacity: 100%;
@@ -45,8 +45,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-bottom: 1rem;
   margin-top: 5rem;
 }
@@ -55,9 +55,9 @@ body {
   height: 80%;
   width: auto;
   -webkit-animation-name: fadein;
-          animation-name: fadein;
+  animation-name: fadein;
   -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  animation-duration: 3s;
 }
 
 #slogan {
@@ -71,9 +71,9 @@ h1 {
   font-size: 2rem;
   font-weight: 900;
   -webkit-animation-name: shrink;
-          animation-name: shrink;
+  animation-name: shrink;
   -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  animation-duration: 1s;
 }
 
 h3 {
@@ -102,9 +102,9 @@ h3 {
   margin: 4px 2px;
   cursor: pointer;
   -webkit-animation-name: fadein;
-          animation-name: fadein;
+  animation-name: fadein;
   -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  animation-duration: 3s;
 }
 
 @-webkit-keyframes fadein {
@@ -152,8 +152,8 @@ h3 {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   position: absolute;
   top: 0;
   left: -100%;
@@ -163,7 +163,7 @@ h3 {
 
 #chat {
   width: 100%;
-  height: 80%;
+  height: 70%;
 }
 
 .nav {
@@ -174,16 +174,16 @@ h3 {
 
 .wrapper {
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: 20%;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   background-color: #f43a34;
 }
 
@@ -224,7 +224,8 @@ h3 {
 .player-controls .play,
 .player-controls .pause {
   display: block;
-  background: url("https://www.dropbox.com/s/aukpnwpj8b77tqy/play.svg?raw=1") no-repeat 0 0;
+  background: url("https://www.dropbox.com/s/aukpnwpj8b77tqy/play.svg?raw=1")
+    no-repeat 0 0;
   background-size: 100% 100%;
   height: 1em;
   position: absolute;
@@ -234,7 +235,8 @@ h3 {
   z-index: 5;
 }
 
-.player-controls .play::before, .player-controls .play::after,
+.player-controls .play::before,
+.player-controls .play::after,
 .player-controls .pause::before,
 .player-controls .pause::after {
   border-radius: 1000px;
@@ -250,7 +252,7 @@ h3 {
 
 .player-controls .play::before {
   -webkit-box-shadow: 0 0 0 rgba(255, 255, 255, 0);
-          box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  box-shadow: 0 0 0 rgba(255, 255, 255, 0);
   -webkit-transition: all 0.25s linear;
   transition: all 0.25s linear;
 }
@@ -282,12 +284,12 @@ h3 {
 
 .player-controls:hover {
   -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .player-controls:hover .play::before {
   -webkit-box-shadow: 0 0 12px rgba(255, 238, 125, 0.8);
-          box-shadow: 0 0 12px rgba(255, 238, 125, 0.8);
+  box-shadow: 0 0 12px rgba(255, 238, 125, 0.8);
 }
 
 .animate-audio1 {
@@ -299,19 +301,19 @@ h3 {
   0%,
   100% {
     -webkit-box-shadow: 0 0 0 0.4em rgba(255, 255, 255, 0.4);
-            box-shadow: 0 0 0 0.4em rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 0 0.4em rgba(255, 255, 255, 0.4);
   }
   25% {
     -webkit-box-shadow: 0 0 0 0.15em rgba(255, 255, 255, 0.15);
-            box-shadow: 0 0 0 0.15em rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 0 0.15em rgba(255, 255, 255, 0.15);
   }
   50% {
     -webkit-box-shadow: 0 0 0 0.55em rgba(255, 255, 255, 0.55);
-            box-shadow: 0 0 0 0.55em rgba(255, 255, 255, 0.55);
+    box-shadow: 0 0 0 0.55em rgba(255, 255, 255, 0.55);
   }
   75% {
     -webkit-box-shadow: 0 0 0 0.25em rgba(255, 255, 255, 0.25);
-            box-shadow: 0 0 0 0.25em rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 0 0.25em rgba(255, 255, 255, 0.25);
   }
 }
 
@@ -319,19 +321,19 @@ h3 {
   0%,
   100% {
     -webkit-box-shadow: 0 0 0 0.4em rgba(255, 255, 255, 0.4);
-            box-shadow: 0 0 0 0.4em rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 0 0.4em rgba(255, 255, 255, 0.4);
   }
   25% {
     -webkit-box-shadow: 0 0 0 0.15em rgba(255, 255, 255, 0.15);
-            box-shadow: 0 0 0 0.15em rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 0 0.15em rgba(255, 255, 255, 0.15);
   }
   50% {
     -webkit-box-shadow: 0 0 0 0.55em rgba(255, 255, 255, 0.55);
-            box-shadow: 0 0 0 0.55em rgba(255, 255, 255, 0.55);
+    box-shadow: 0 0 0 0.55em rgba(255, 255, 255, 0.55);
   }
   75% {
     -webkit-box-shadow: 0 0 0 0.25em rgba(255, 255, 255, 0.25);
-            box-shadow: 0 0 0 0.25em rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 0 0.25em rgba(255, 255, 255, 0.25);
   }
 }
 
@@ -344,19 +346,19 @@ h3 {
   0%,
   100% {
     -webkit-box-shadow: 0 0 0 0.25em rgba(255, 255, 255, 0.15);
-            box-shadow: 0 0 0 0.25em rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 0 0.25em rgba(255, 255, 255, 0.15);
   }
   25% {
     -webkit-box-shadow: 0 0 0 0.4em rgba(255, 255, 255, 0.3);
-            box-shadow: 0 0 0 0.4em rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 0 0.4em rgba(255, 255, 255, 0.3);
   }
   50% {
     -webkit-box-shadow: 0 0 0 0.15em rgba(255, 255, 255, 0.05);
-            box-shadow: 0 0 0 0.15em rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 0 0.15em rgba(255, 255, 255, 0.05);
   }
   75% {
     -webkit-box-shadow: 0 0 0 0.55em rgba(255, 255, 255, 0.45);
-            box-shadow: 0 0 0 0.55em rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 0 0.55em rgba(255, 255, 255, 0.45);
   }
 }
 
@@ -364,19 +366,19 @@ h3 {
   0%,
   100% {
     -webkit-box-shadow: 0 0 0 0.25em rgba(255, 255, 255, 0.15);
-            box-shadow: 0 0 0 0.25em rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 0 0.25em rgba(255, 255, 255, 0.15);
   }
   25% {
     -webkit-box-shadow: 0 0 0 0.4em rgba(255, 255, 255, 0.3);
-            box-shadow: 0 0 0 0.4em rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 0 0.4em rgba(255, 255, 255, 0.3);
   }
   50% {
     -webkit-box-shadow: 0 0 0 0.15em rgba(255, 255, 255, 0.05);
-            box-shadow: 0 0 0 0.15em rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 0 0.15em rgba(255, 255, 255, 0.05);
   }
   75% {
     -webkit-box-shadow: 0 0 0 0.55em rgba(255, 255, 255, 0.45);
-            box-shadow: 0 0 0 0.55em rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 0 0.55em rgba(255, 255, 255, 0.45);
   }
 }
 /*# sourceMappingURL=style.css.map */
