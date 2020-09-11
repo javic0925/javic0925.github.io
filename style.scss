@@ -115,13 +115,23 @@ h3 {
 
 #chat {
   width: 100%;
-  height: 80%;
+  height: 73%;
 }
 
 .nav {
   position: absolute;
-  bottom: 7%;
+  bottom: 14%;
   left: 1.5rem;
+}
+
+.footer {
+  width: 100vw;
+  height: 7%;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .wrapper {
