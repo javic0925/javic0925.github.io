@@ -9,6 +9,12 @@
       rel="stylesheet"
     />
     <title>La Voz De Dios | Radio</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <link
+      rel="shortcut icon"
+      href="./assets/favicon_io/favicon.ico"
+      type="image/x-icon"
+    />
   </head>
   <body>
     <div class="main">
@@ -19,10 +25,117 @@
         <h1>LA VOS DE DIOS</h1>
         <h3>Radio</h3>
       </div>
-      <div id="button">
-        <button class="button" type="button">Escuchar Radio</button>
+      <div class="boton">
+        <button onclick="myfunction()" id="button">Escuchar Radio</button>
       </div>
     </div>
-    <div class="radiochat"></div>
+    <div class="radiochat">
+      <div class="nav">
+        <img
+          onclick="mycommand()"
+          src="./assets/iconmonstr-arrow-64-32.png"
+          alt="boton de regreso"
+        />
+      </div>
+      <div class="wrapper">
+        <a href="#" title="Listen to the song" class="player-controls">
+          <span class="audio-label">
+            <span>
+              <small></small>
+            </span>
+          </span>
+          <span class="play"></span>
+          <span class="pause"></span>
+        </a>
+        <audio id="player">
+          <source
+            src="https://stream.zenolive.com/n8sx30x9na0uv.aac"
+            type="audio/mp3"
+          />
+        </audio>
+      </div>
+      <div id="chat">
+        <iframe
+          src="https://www6.cbox.ws/box/?boxid=849054&boxtag=TY5eG5"
+          width="100%"
+          height="100%"
+          allowtransparency="yes"
+          allow="autoplay"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          scrolling="auto"
+        ></iframe>
+      </div>
+    </div>
+    <script>
+      function myfunction() {
+        document.getElementsByClassName("radiochat")[0].style.left = "0";
+        document.getElementsByClassName("main")[0].style.opacity = "0";
+      }
+
+      function mycommand() {
+        document.getElementsByClassName("radiochat")[0].style.left = "-100%";
+        document.getElementsByClassName("main")[0].style.opacity = "100%";
+      }
+    </script>
+    <script>
+      var getaudio = $("#player")[0],
+        mouseovertimer,
+        audiostatus = "off",
+        playerControls = ".player-controls";
+
+      $(document).on("mouseenter", playerControls, function () {
+        if (!mouseovertimer) {
+          mouseovertimer = window.setTimeout(function () {
+            mouseovertimer = null;
+
+            if (!$(playerControls).hasClass("playing")) {
+              getaudio.load();
+              getaudio.play();
+              $(playerControls).addClass("playing");
+              return false;
+            }
+          }, 2500);
+        }
+      });
+
+      $(document).on("mouseleave", playerControls, function () {
+        if (mouseovertimer) {
+          window.clearTimeout(mouseovertimer);
+          mouseovertimer = null;
+        }
+      });
+
+      $(document).on("click touch", playerControls, function (e) {
+        e.preventDefault();
+
+        if (!$(playerControls).hasClass("playing")) {
+          if (audiostatus == "off") {
+            $(playerControls).addClass("playing");
+            getaudio.load();
+            getaudio.play();
+            window.clearTimeout(mouseovertimer);
+            audiostatus = "on";
+            return false;
+          } else if (audiostatus == "on") {
+            $(playerControls).addClass("playing");
+            getaudio.play();
+          }
+        } else if ($(playerControls).hasClass("playing")) {
+          getaudio.pause();
+          $(playerControls).removeClass("playing");
+          window.clearTimeout(mouseovertimer);
+          audiostatus = "on";
+        }
+
+        return false;
+      });
+
+      $("#player").on("ended", function () {
+        $(playerControls).removeClass("playing");
+        audiostatus = "off";
+      });
+    </script>
   </body>
 </html>

@@ -18,6 +18,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   font-family: "Poppins", sans-serif;
+  overflow: hidden;
 }
 
 .main {
@@ -32,6 +33,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-transition: 1s ease-in;
+  transition: 1s ease-in;
+  opacity: 100%;
 }
 
 #logo {
@@ -77,13 +81,13 @@ h3 {
   font-weight: 700;
 }
 
-#button {
+.boton {
   width: 100vw;
   height: 20%;
   text-align: center;
 }
 
-.button {
+#button {
   background-color: #f43a34;
   border: 2.5px solid black;
   border-radius: 10px;
@@ -136,6 +140,243 @@ h3 {
   }
   to {
     font-size: 2rem;
+  }
+}
+
+.radiochat {
+  width: 100vw;
+  height: 100vh;
+  opacity: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  -webkit-transition: 1s ease-in;
+  transition: 1s ease-in;
+}
+
+#chat {
+  width: 100%;
+  height: 80%;
+}
+
+.nav {
+  position: absolute;
+  top: 7%;
+  left: 1.5rem;
+}
+
+.wrapper {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 20%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f43a34;
+}
+
+.player-controls {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 40px;
+  height: 1em;
+  position: relative;
+  text-decoration: none;
+  width: 1em;
+  -webkit-transition: transform 0.25s ease-in-out;
+  -webkit-transition: -webkit-transform 0.25s ease-in-out;
+  transition: -webkit-transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+}
+
+.player-controls .audio-label {
+  line-height: 1;
+  position: absolute;
+  right: 1.35em;
+  text-align: right;
+  text-transform: uppercase;
+  top: -0.4em;
+}
+
+.player-controls .audio-label span {
+  font-size: 18px;
+}
+
+.player-controls .audio-label span small {
+  display: block;
+  font-size: 0.83em;
+}
+
+.player-controls .play,
+.player-controls .pause {
+  display: block;
+  background: url("https://www.dropbox.com/s/aukpnwpj8b77tqy/play.svg?raw=1") no-repeat 0 0;
+  background-size: 100% 100%;
+  height: 1em;
+  position: absolute;
+  width: 1em;
+  -webkit-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+  z-index: 5;
+}
+
+.player-controls .play::before, .player-controls .play::after,
+.player-controls .pause::before,
+.player-controls .pause::after {
+  border-radius: 1000px;
+  content: "";
+  display: block;
+  position: absolute;
+  height: 1em;
+  right: 0;
+  top: 0;
+  width: 1em;
+  z-index: 0;
+}
+
+.player-controls .play::before {
+  -webkit-box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+          box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  -webkit-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+}
+
+.player-controls .pause {
+  background-image: url("https://www.dropbox.com/s/ev272i742j9ugvv/pause.svg?raw=1");
+  opacity: 0;
+  right: 0;
+  top: 0;
+}
+
+.player-controls.playing .play {
+  opacity: 0;
+}
+
+.player-controls.playing .pause {
+  opacity: 1;
+}
+
+.player-controls.playing .pause::before {
+  -webkit-animation: audio1 1.5s infinite ease-in-out;
+  animation: audio1 1.5s infinite ease-in-out;
+}
+
+.player-controls.playing .pause::after {
+  -webkit-animation: audio2 2.2s infinite ease-in-out;
+  animation: audio2 2.2s infinite ease-in-out;
+}
+
+.player-controls:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.player-controls:hover .play::before {
+  -webkit-box-shadow: 0 0 12px rgba(255, 238, 125, 0.8);
+          box-shadow: 0 0 12px rgba(255, 238, 125, 0.8);
+}
+
+.animate-audio1 {
+  -webkit-animation: audio1 1.5s infinite ease-in-out;
+  animation: audio1 1.5s infinite ease-in-out;
+}
+
+@-webkit-keyframes audio1 {
+  0%,
+  100% {
+    -webkit-box-shadow: 0 0 0 0.4em rgba(255, 255, 255, 0.4);
+            box-shadow: 0 0 0 0.4em rgba(255, 255, 255, 0.4);
+  }
+  25% {
+    -webkit-box-shadow: 0 0 0 0.15em rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 0 0.15em rgba(255, 255, 255, 0.15);
+  }
+  50% {
+    -webkit-box-shadow: 0 0 0 0.55em rgba(255, 255, 255, 0.55);
+            box-shadow: 0 0 0 0.55em rgba(255, 255, 255, 0.55);
+  }
+  75% {
+    -webkit-box-shadow: 0 0 0 0.25em rgba(255, 255, 255, 0.25);
+            box-shadow: 0 0 0 0.25em rgba(255, 255, 255, 0.25);
+  }
+}
+
+@keyframes audio1 {
+  0%,
+  100% {
+    -webkit-box-shadow: 0 0 0 0.4em rgba(255, 255, 255, 0.4);
+            box-shadow: 0 0 0 0.4em rgba(255, 255, 255, 0.4);
+  }
+  25% {
+    -webkit-box-shadow: 0 0 0 0.15em rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 0 0.15em rgba(255, 255, 255, 0.15);
+  }
+  50% {
+    -webkit-box-shadow: 0 0 0 0.55em rgba(255, 255, 255, 0.55);
+            box-shadow: 0 0 0 0.55em rgba(255, 255, 255, 0.55);
+  }
+  75% {
+    -webkit-box-shadow: 0 0 0 0.25em rgba(255, 255, 255, 0.25);
+            box-shadow: 0 0 0 0.25em rgba(255, 255, 255, 0.25);
+  }
+}
+
+.animate-audio2 {
+  -webkit-animation: audio2 2.2s infinite ease-in-out;
+  animation: audio2 2.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes audio2 {
+  0%,
+  100% {
+    -webkit-box-shadow: 0 0 0 0.25em rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 0 0.25em rgba(255, 255, 255, 0.15);
+  }
+  25% {
+    -webkit-box-shadow: 0 0 0 0.4em rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 0 0.4em rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    -webkit-box-shadow: 0 0 0 0.15em rgba(255, 255, 255, 0.05);
+            box-shadow: 0 0 0 0.15em rgba(255, 255, 255, 0.05);
+  }
+  75% {
+    -webkit-box-shadow: 0 0 0 0.55em rgba(255, 255, 255, 0.45);
+            box-shadow: 0 0 0 0.55em rgba(255, 255, 255, 0.45);
+  }
+}
+
+@keyframes audio2 {
+  0%,
+  100% {
+    -webkit-box-shadow: 0 0 0 0.25em rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 0 0.25em rgba(255, 255, 255, 0.15);
+  }
+  25% {
+    -webkit-box-shadow: 0 0 0 0.4em rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 0 0.4em rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    -webkit-box-shadow: 0 0 0 0.15em rgba(255, 255, 255, 0.05);
+            box-shadow: 0 0 0 0.15em rgba(255, 255, 255, 0.05);
+  }
+  75% {
+    -webkit-box-shadow: 0 0 0 0.55em rgba(255, 255, 255, 0.45);
+            box-shadow: 0 0 0 0.55em rgba(255, 255, 255, 0.45);
   }
 }
 /*# sourceMappingURL=style.css.map */
