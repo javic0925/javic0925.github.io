@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: .5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.8;
+  scroll-behavior: smooth;
+}
+
+.intro {
+  width: 98vw;
+  height: 50vh;
+  position: relative;
+}
+
+.slider {
+  margin: 0 50% 0 0;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  width: 50%;
+  height: 100%;
+}
+
+.nav-toggle {
+  float: right;
+  cursor: pointer;
+  position: absolute;
+  top: 0rem;
+  right: 2rem;
+}
+
+.mobile-nav {
+  background-color: #dddddd;
+  font-size: 1.3rem;
+  height: 100vh;
+  padding: 1rem 0;
+  overflow: scroll;
+  width: 300px;
+  position: fixed;
+  top: 0;
+  right: -300px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li a {
+  margin: 0.3rem 1.5rem;
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+}
+
+.sub-menu {
+  background-color: #e9e9e9;
+  display: none;
+}
+
+.sub-menu li a {
+  margin-left: 2rem;
+}
+
+#aboutMe {
+  width: 98vw;
+}
+
+#contact {
+  width: 98vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#form {
+  width: 50%;
+  height: 70%;
+  border-radius: 20px;
+  background: #319ad3;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+form button, input, textarea {
+  width: 80%;
+  background: #ffffff;
+  font-family: poppins;
+}
+
+form label {
+  width: 80%;
+}
+/*# sourceMappingURL=styles.css.map */
