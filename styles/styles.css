@@ -46,7 +46,7 @@ li a {
   margin: 0.3rem 1.5rem;
   display: inline-block;
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .sub-menu {
@@ -118,9 +118,11 @@ li a {
 }
 
 #projects {
-  height: 70vh;
+  max-height: 40rem;
   width: 100%;
   margin: auto;
+  overflow: hidden;
+  padding-top: 3rem;
 }
 
 #title {
@@ -132,15 +134,32 @@ li a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-bottom: 2rem;
+}
+
+#title p {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 5px;
 }
 
 #container {
-  padding: 1rem;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[5];
-      grid-template-columns: repeat(5, 1fr);
-  grid-column-gap: 10px;
+  padding-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: Center;
+      -ms-flex-pack: Center;
+          justify-content: Center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 85%;
   width: 100%;
   background: -webkit-gradient(linear, left bottom, left top, from(#4b6cb7), to(#182848));
@@ -149,7 +168,8 @@ li a {
 
 #showcase {
   margin: auto;
-  height: 80%;
+  height: 350px;
+  width: auto;
 }
 
 #showcase img {
@@ -163,7 +183,7 @@ li a {
 
 .cover {
   width: 100%;
-  height: 70vh;
+  height: 40rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -176,12 +196,12 @@ li a {
 }
 
 .cover p {
-  font-size: 2rem;
+  font-size: 1.3rem;
 }
 
 .footer {
   width: 100%;
-  height: 20vh;
+  height: 10rem;
   background-color: #0e0e0e;
   color: white;
   display: -webkit-box;
@@ -198,5 +218,83 @@ li a {
 .footer p {
   font-size: 1rem;
   font-weight: 200;
+}
+
+.contactMe {
+  width: 100%;
+  height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background: -webkit-gradient(linear, left top, right top, from(#FC466B), to(#3F5EFB));
+  background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+}
+
+.contactForm {
+  margin: auto;
+  border-radius: 10px;
+  width: 25%;
+  height: 60%;
+  background: #ffffff1e;
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+}
+
+form {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+form label {
+  font-weight: 400;
+  color: white;
+}
+
+form button {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: #f700ff2c;
+  -webkit-box-shadow: 0 8px 32px 0 #871f795e;
+          box-shadow: 0 8px 32px 0 #871f795e;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  color: white;
+  position: absolute;
+  height: 3rem;
+  bottom: 0;
+  width: 100%;
+  border: 0;
+}
+
+form input {
+  width: 100%;
+}
+
+form textarea {
+  width: 100%;
+  height: 8rem;
 }
 /*# sourceMappingURL=styles.css.map */
