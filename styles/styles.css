@@ -231,8 +231,8 @@ li a {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  background: -webkit-gradient(linear, left top, right top, from(#FC466B), to(#3F5EFB));
-  background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#d53369), to(#daae51));
+  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
 }
 
 .contactForm {
@@ -241,8 +241,8 @@ li a {
   width: 25%;
   height: 60%;
   background: #ffffff1e;
-  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  -webkit-box-shadow: 0 8px 32px 0 #b83b1546;
+          box-shadow: 0 8px 32px 0 #b83b1546;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
@@ -276,9 +276,9 @@ form label {
 form button {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  background: #f700ff2c;
-  -webkit-box-shadow: 0 8px 32px 0 #871f795e;
-          box-shadow: 0 8px 32px 0 #871f795e;
+  background: #ff000059;
+  -webkit-box-shadow: 0 8px 32px 0 #ff000049;
+          box-shadow: 0 8px 32px 0 #ff000049;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   color: white;
